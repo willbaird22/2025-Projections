@@ -1,0 +1,275 @@
+body {
+    background: #FCF9F5;
+    min-height: 100vh;
+}
+
+/* h1, h2, h3, h4, h5 {
+    font-family: 'Libre Baskerville', serif;
+} */
+
+#profile-pic {
+    width: 100%;
+    height: auto;
+}
+
+.project-card {
+    max-width: 300px;
+    /* height: 100px; */
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* h1, h2 {
+    font-family: 'Libre Baskerville', serif;
+} */
+
+h1 {
+    font-size: clamp(2.5rem, 5vw, 5rem);
+}
+
+/* .lead {
+    font-size: 1.75rem;
+} */
+
+.button {
+    font-size: 1.312rem;
+    color: white;
+    box-shadow: 3px 3px rgba(0, 0, 0, 1)!important;
+    border-radius: 35px;
+    border: 1px solid rgba(0, 0, 0, 1);
+    padding: 5px 15px 5px 15px;
+}
+
+.button-main-page {
+    font-size: 1rem;
+    color: white;
+    box-shadow: 3px 3px rgba(0, 0, 0, 1)!important;
+    border-radius: 35px;
+    border: 1px solid rgba(0, 0, 0, 1);
+    padding: 3px 10px 3px 10px;
+}
+    
+.button:hover {
+    box-shadow: 0px 0px rgba(0, 0, 0, 0.1)!important;
+    transform: translate(3px, 3px)!important;
+    transition: all .1s;
+    color: white;
+    cursor: pointer;
+}
+
+.button-main-page:hover {
+    box-shadow: 0px 0px rgba(0, 0, 0, 0.1)!important;
+    transform: translate(3px, 3px)!important;
+    transition: all .1s;
+    color: white;
+    cursor: pointer;
+}
+
+.green-bg {
+    background: #39B34D;
+}
+
+.red-bg {
+    background: #CA2E55;
+}
+
+.navy-bg {
+    background: #011D2A;
+}
+
+.python-bg {
+    background: #FFD342;
+}
+
+.html-bg {
+    background: #F16629;
+}
+
+.css-bg {
+    background: #32A9DC;
+}
+
+.pytorch-bg {
+    background: #EE7966;
+}
+
+.r-bg {
+    background: #1D64B6;
+}
+
+/*--------
+| Navbar |
+--------*/
+
+.navbar {
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.navbar-brand {
+    /* font-family: 'Libre Baskerville', serif; */
+    /* font-weight: bold; */
+    font-size: 1.5rem;
+}
+
+.nav-item {
+    padding: 10px;
+    font-size: 1.25rem;
+}
+
+/*----------------
+| Logo |
+----------------*/
+/* Move logo to left and make smaller
+-------------------------------------*/
+.logo {
+    position: absolute;
+    left: 10px;
+    top: 0;
+    width: 50px;
+    height: auto;
+}
+
+
+/*----------------
+| Article header |
+----------------*/
+
+.article-header {
+    min-height: 50vh;
+    padding-top: 13.12rem;
+    padding-bottom: 4.2rem;
+    background-color: white;
+}
+
+.article-title-subtitle {
+    max-width: 100%;
+    color: #083050;
+}
+
+/* Large screens */
+@media (min-width : 1000px) {
+    .article-title-subtitle {
+      max-width: 70%;
+    }
+}
+
+/*--------------
+| Article body |
+--------------*/
+
+.article-body {
+    min-height: 50vh;
+    /* background-color: #F6F6F6; */
+    background-color: rgb(251,249,241);
+}
+
+.article-text {
+    font-size: 1.50rem;
+}
+
+.article-heading {
+    font-weight: 700;
+}
+
+#fullscreen-btn {
+    position: relative;
+    float: right;
+    margin-top: 10px; /* Adjust as needed */
+}
+
+/*---------------
+| Scrolling part
+----------------*/
+
+#scrolly {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;  /* Allow wrapping on smaller screens */
+    padding: 1rem;
+    gap: 1rem;  /* Add spacing between items */
+}
+
+#scrolly > * {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+article {
+    position: relative;
+    padding: 1rem;
+    width: 100%;
+    max-width: 600px; /* Limit article width on large screens */
+    margin: 0 auto;   /* Center it */
+}
+
+figure {
+    position: -webkit-sticky;
+    position: sticky;
+    width: 100%;
+    margin: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    /* background-color: #8a8a8a; */
+    z-index: 0;
+}
+
+figure p {
+    text-align: center;
+    padding: 1rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: clamp(3rem, 8vw, 8rem);  /* Responsive font size */
+    font-weight: 900;
+    color: #fff;
+}
+
+.step {
+    margin: 0 auto 2rem auto;
+    /* background-color: #3b3b3b; */
+    /* color: #fff; */
+    padding: 1rem;
+    color: #3b3b3b;
+}
+
+.step:last-child {
+    margin-bottom: 0;
+}
+
+.step.is-active {
+    /* background-color: goldenrod; */
+    color: #3b3b3b;
+}
+
+.step p {
+    text-align: center;
+    padding: 1rem;
+    font-size: clamp(1rem, 2vw, 1.5rem);  /* Responsive text */
+}
+
+/* Slightly Smaller Screens (Laptops/Tablets) */
+@media (max-width: 1400px) {
+    .step p {
+        font-size: clamp(0.875rem, 1.2vw, 1.25rem);  /* Shrink text slightly */
+    }
+}
+
+/* Extra Small Screens (Phones) */
+@media (max-width: 768px) {
+    .step p {
+        font-size: 0.875rem;  /* Fixed small size for phones */
+    }
+}
+
+#outro {
+    height: 640px;
+}
