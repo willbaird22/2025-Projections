@@ -216,10 +216,24 @@ function toggleFullScreen() {
 </script>
 
 <script>
-    const password = prompt("Enter password to view this page:");
-    if (password !== "Moisture@10%") {
-        document.body.innerHTML = "<h2>Access Denied</h2>";
+// Add blur effect to the body initially
+document.body.style.filter = "blur(10px)";
+document.body.style.pointerEvents = "none";
+
+// Prompt for password on page load
+window.onload = function () {
+    const correctPassword = "Moisture@10%";
+    const enteredPassword = prompt("Enter password to view this page:");
+
+    if (enteredPassword === correctPassword) {
+        // Unlock the page by removing blur and reactivating interactions
+        document.body.style.filter = "none";
+        document.body.style.pointerEvents = "auto";
+    } else {
+        // Show access denied message if password is wrong
+        document.body.innerHTML = "<h2 style='text-align:center; margin-top:20%;'>Access Denied</h2>";
     }
+};
 </script>
 
 </body></html>
